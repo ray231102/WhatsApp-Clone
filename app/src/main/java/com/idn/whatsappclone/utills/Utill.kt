@@ -6,6 +6,8 @@ import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.idn.whatsappclone.R
+import java.text.DateFormat
+import java.util.*
 
 fun populateImage(
     context: Context?,
@@ -23,4 +25,9 @@ fun progressDrawable(context: Context): CircularProgressDrawable { return Circul
     strokeWidth = 5f                                                    // ketebalan garis lingkaran centerRadius = 30f // diameter lingkaran
     start()                                                             // memulai progressDrawable
 }
+}
+
+fun getTime(): String{
+    val dateFormat = DateFormat.getDateInstance()
+    return dateFormat.format(Date())
 }

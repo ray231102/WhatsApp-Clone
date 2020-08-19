@@ -8,13 +8,11 @@ import com.idn.whatsappclone.fragments.StatusListFragment
 import com.idn.whatsappclone.fragments.StatusUpdateFragment
 
 
-class SectionPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
+class SectionPagerAdapter(fm: FragmentManager): FragmentPagerAdapter(fm) {
 
     private val chatsFragment = ChatsFragment()
-    private val statusUpdateFragment =
-        StatusUpdateFragment()
-    private val statusFragment =
-        StatusListFragment()
+    private val statusUpdateFragment = StatusUpdateFragment()
+    private val statusFragment = StatusListFragment()
 
     override fun getItem(position: Int): Fragment {
         return when (position) {
